@@ -11,3 +11,7 @@
 - Удаление:
   docker stop $(docker ps -a -q)
   docker rm $(docker ps -a -q)
+  
+#### Получения доступа к логам контейнера
+- docker logs -f   (-f follow)
+  
