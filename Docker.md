@@ -10,11 +10,8 @@
 - Список: docker ps -a
 - Удаление:
   docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> master
 #### Получения доступа к логам контейнера
 - docker logs -f   (-f follow)
-###################
+123
+cxvxbxbdf
