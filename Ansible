@@ -3,3 +3,6 @@ ansible-inventory --list
 ansible all -m copy -a "src=test.txt dest=/home" -b Копирование файла
 ansible all -m file -a "path=/home/test.txt state=absent" -b    Удаление файла
 ansible all -m get_url -a "url=https://www.7-zip.org/a/7z1604.exe dest=/home/maslov_kng"  Скачивание по URL
+ansible centos -m yum -a "name=stress state=installed" -b   Установка yum
+ansible debian -m apt -a "name=stress state=installed" -b   Установка apt
+ansible debian -m apt -a "name=stress state=removed" -b     Удаление пакета
