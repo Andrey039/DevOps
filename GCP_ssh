@@ -1,0 +1,2 @@
+Генерация ключа ```ssh-keygen -t rsa -f ~/.ssh/[KEY_FILENAME] -C [USERNAME]```
+Скопировать ключ в метаданные  ```https://console.cloud.google.com/compute/metadata/sshKeys```
