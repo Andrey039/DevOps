@@ -13,5 +13,6 @@
 
 #### Получения доступа к логам контейнера
 - docker logs -f   (-f follow)
-123
-cxvxbxbdf
+
+#### Запуск всех остановленных контейнеров
+docker start $(docker ps -a -q -f status=exited)
