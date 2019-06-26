@@ -3,7 +3,7 @@
    $ systemctl disable apt-daily.timer
    $ systemctl mask apt-daily.service
    $ systemctl daemon-reload```
-####check current status
+#### check current status
 
 ```$ systemctl status apt-daily.timer
    $ systemctl status apt-daily.service```
