@@ -15,7 +15,10 @@
 ` $ systemctl status apt-daily.service `
 
 ### Install  qemu-guest-agent
+
 ` apt-get install qemu-guest-agent `
+
 ` yum install qemu-guest-agent `
+
 #### Test
 ` qm agent <vmid> ping ` 
