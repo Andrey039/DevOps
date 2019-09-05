@@ -22,5 +22,5 @@
 
 #### Test
 ` qm agent <vmid> ping ` 
-### Add audio divice to KVM VM
+### Add audio device to KVM VM (add to vmname.conf)
 ` args: -device intel-hda,id=sound5,bus=pci.0,addr=0x18 -device hda-micro,id=sound5-codec0,bus=sound5.0,cad=0 -device hda-duplex,id=sound5-codec1,bus=sound5.0,cad=1  `
