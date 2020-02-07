@@ -1,6 +1,6 @@
 #### Удаление всех образов
 - Список: docker images -a
-- Удаление: docker rmi $(docker images -a -q)
+- Удаление: docker rmi $(docker images -a -q), docker rmi $(docker images -q) -f
 
 #### Удаление всех закрытых контейнеров
 - Список: docker ps -a -f status=exited
