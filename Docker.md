@@ -28,3 +28,13 @@ You will be prompted to enter your user’s password to continue.
 Confirm that your user is now added to the docker group by typing:
 
 `` id -nG ``
+
+
+    Create a new file in /etc/sudoers.d using your favourite text editor. In my example I'll create a file in this location named lindsay since that'll help to remember what this is for later.
+    Add the following single line of text to the newly created file and save the changes.
+
+    lindsay ALL=(ALL) NOPASSWD:ALL
+
+    Next we need to set permissions of 0400 on this file:
+
+    chmod 0400 /etc/sudoers.d/lindsay
