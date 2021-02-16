@@ -11,4 +11,9 @@ systemctl enable zabbix-agent
 systemctl restart zabbix-agent
 
 status=$(systemctl status  zabbix-agent | grep Active)
+serevr_name=$(cat  /etc/zabbix/zabbix_agentd.conf  | grep -e "^Server=" )
+host_name=$(cat  /etc/zabbix/zabbix_agentd.conf  | grep -e "^Hostname=" )
+
+echo $serevr_name
+echo $host_name
 echo $status
