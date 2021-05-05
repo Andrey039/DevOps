@@ -1,0 +1,2 @@
+### Force-delete the pod
+kubectl delete pod --grace-period=0 --force --namespace [NAMESPACE] [POD_NAME]
