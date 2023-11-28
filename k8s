@@ -2,3 +2,5 @@
 kubectl delete pod --grace-period=0 --force --namespace [NAMESPACE] [POD_NAME]
 # Find envs in the all deployments
 kubectl -n $ns  get -o json deployments.apps | jq -r  '.items[]."metadata"."name"' | xargs -n 1 -I {} bash -c "echo {} ;kubectl -n $ns describe  deployments.apps {} | grep -e xxx"
+Мэджик стринг:
+kubectl get deployments.apps --all-namespaces -o json | jq -r '.items[] | select(.spec.template.spec.containers[].env[]? | select(.value | tostring | contains("http://offers"))) | .metadata.name'
