@@ -38,3 +38,8 @@ Confirm that your user is now added to the docker group by typing:
     Next we need to set permissions of 0400 on this file:
 
     chmod 0400 /etc/sudoers.d/lindsay
+  ### Сохранить все образа в ОС в архив с сохранением тэгов
+  - создать файл со списком образов
+  docker images --format "{{.Repository}}:{{.Tag}}" > image_list.txt
+  - сохранить в архивы
+  while IFS= read -r image; do docker save "$image" | gzip > "./$(echo "$image" | tr / _).tar.gz"; done < image_list.txt
